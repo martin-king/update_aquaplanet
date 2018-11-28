@@ -333,15 +333,15 @@ C--   3.2 SST
           enddo
         enddo
       enddo
-c mpkaqua BEGIN: **********************************
+cmpk aqua BEGIN: **********************************
       do imm = 1,6
         immp6 = imm+6
         do j = 1,il/2
           temp = 0.d0
           nlonsea = 0
           do i = 1,ix
-c mpkaqua   for the SH
-c mpkaqua   the if condition is to leave out undefined values designated land points 
+cmpk aqua   for the SH
+cmpk aqua   the if condition is to leave out undefined values designated land points 
             if (sst12(i,j,imm) .gt. 150.d0) then  
              nlonsea = nlonsea + 1 
              temp = temp + sst12(i,j,imm) 
@@ -366,7 +366,7 @@ c mpkaqua   the if condition is to leave out undefined values designated land po
           temp = 0.d0
           nlonsea = 0 
           do i = 1, ix
-c mpkaqua   for the NH
+cmpk aqua   for the NH
             if (sst12(i,j,immp6) .gt. 150.d0) then 
               nlonsea = nlonsea + 1 
               temp = temp + sst12(i,j,immp6) 
